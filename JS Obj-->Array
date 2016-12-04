@@ -1,0 +1,7 @@
+function transform(obj){
+    var arr = [];
+    for(var item in obj){
+        arr.push(obj[item]);
+    }
+    return arr;
+}
