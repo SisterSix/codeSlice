@@ -1,0 +1,48 @@
+        //JS 给定两个数组，对两个数组内的Obj进行比较.本例子总，id相同，name相同的标记为“相同的”，id相同，name不同，标记为“修改的”；
+        //arr1中有，arr2中没有的，标记为"删除的“，arr2中有，arr1中没有的，标记为“新增的”
+        var arr1=[];
+        var arr2=[];
+        arr1[0] = {id:1,name:'A'};//删除的
+        arr1[1] = {id:2,name:'B'};
+        arr1[2] = {id:3,name:'C'};
+        arr2[0] = {id:4,name:'C'};//新增的
+        arr2[1] = {id:3,name:'C'};//没变的
+        arr2[2] = {id:2,name:'2-C'};//修改的
+        arr2[3] = {id:5,name:'5-E'};//修改的
+        var newItem=[],
+            fixedItem=[],
+            removedItem=[],
+            sameItem=[];
+        console.log();
+        console.log();
+        for(var i=0;i<arr1.length;i++){
+            for(var j=0;j<arr2.length;j++){
+                if(arr1[i].id==arr2[j].id){
+                    if(arr1[i].name==arr2[j].name){//id相同,name相同,判定为"未改变"
+                        sameItem.push(arr1[i]);
+                        arr1[i].flag = "same";
+                        arr2[j].flag = "same";
+                        break;
+                    }else{//id相同,name不同,判定为"修改"
+                        fixedItem.push(arr2[j]);
+                        arr1[i].flag = "fixed";
+                        arr2[j].flag = "fixed";
+                        break;
+                    }
+                }else if(j==arr2.length-1){//对比完成后,依然没有相同Id,判定为"删除的"
+                    arr1[i].flag = "remove";
+                    removedItem.push(arr1[i]);
+                }
+            }
+        }
+        //arr2中没有标记的,为新增的,
+        for(var i=0;i<arr2.length;i++){
+            if(arr2[i].flag==undefined){
+                arr2[i].flag = "new"
+                newItem.push(arr2[i]);
+            }
+        }
+        console.log(newItem);
+        console.log(fixedItem);
+        console.log(removedItem);
+        console.log(sameItem);
