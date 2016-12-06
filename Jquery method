@@ -1,0 +1,12 @@
+
+1.map
+var arr = [1,22,34,5];
+//map接收两个参数，第一个 要遍历的数组，第二个回调函数，该回调函数接收两个参数，第一个 数组中的元素，第二个，该元素的下标。
+$.map(arr,function(ele,index){
+  console.log(index+':'+ele);
+})
+array方法inArray
+2.inArray
+var a = 1;
+var arr = [1,23,4]
+$.inArray(a,arr);//若a存在于arr中，则返回a在arr中的位置，若a不在arr中，返回-1.
