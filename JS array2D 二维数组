@@ -1,0 +1,2 @@
+var  arr2D = new Array(5).fill(new Array(3))//一个5*3的二位数组
+arr2D[0][1] = 1;//赋值
