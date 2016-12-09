@@ -1,0 +1,22 @@
+// 定义个对象，对象属性（方法也是属性）之间用逗号隔开，最后给个返回实例的get方法,把这个对象返回
+var Person = {
+  name:"",
+  
+  age:"",
+  
+  talk:function(content){
+     console.log(content);
+      };
+  
+  get:function(){
+      return:this;
+    };
+  }
+  // 获取实例
+  var p1 = Person.get();
+  
+  // 设置属性值
+  p1.name = "song";
+  
+  // 调用方法
+  p1.talk("bulabulabual");
