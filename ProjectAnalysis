@@ -1,0 +1,12 @@
+1. 数据库中要有对该表记录的排序字段
+
+2. momnet.js和webkit 浏览器内核有兼容问题，moment.js无法正常工作在webkit环境下
+
+
+3. datatable控件在导出Excel后，会导致大数的精度丢失
+
+
+
+
+
+
