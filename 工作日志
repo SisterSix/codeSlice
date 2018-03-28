@@ -1303,7 +1303,10 @@ Error : You can't specify target table 'coach' for update in FROM clause  -- sql
               
         2. 出现了一些比较难以解决的问题: 用户机器上有些代码不能正常执行, 样式
               文件加载不到, 不知道是什么情况
-        
+              
+        3. 查看了Collection 的源码 感觉收获蛮大的 LinkedList ArrayList
+            HashMap LinkedHashMap treeMap HashSet LinkedHashSet
+            TreeSet
 
 
 
